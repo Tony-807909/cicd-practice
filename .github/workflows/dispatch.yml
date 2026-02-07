@@ -12,3 +12,17 @@ jobs:
 
       - name: checkout
         uses: actions/checkout@v4
+
+      - name: Verify code content
+        run: |
+          echo "================================================"
+          echo "📍 Proof: Branch Identifier"
+          echo "================================================"
+          cat branch-identifier.txt
+          echo ""
+
+          echo "================================================"
+          echo "📍 GitHub Context (for reference)"
+          echo "================================================"
+          echo "github.ref: ${{ github.ref }}"
+          echo "github.sha: ${{ github.sha }}"
